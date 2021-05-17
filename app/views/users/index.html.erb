@@ -1,0 +1,21 @@
+<h1>Users</h1>
+<hr>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% @users.each do |user| %>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title"><%= user %></h5>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to additional content.
+            This content is a little bit longer.
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          <%= "created at #{user.created_at.strftime('%b %d, %Y')}" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

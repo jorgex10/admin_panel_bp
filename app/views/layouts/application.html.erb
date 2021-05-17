@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PanelAdminBp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="general-container">
+      <%= render 'layouts/navigation/sidebar' %>
+
+      <div class="main">
+        <%= render 'layouts/navigation/topbar' %>
+
+        <div class="container mt-4">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
