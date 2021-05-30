@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :users
 
-  root "users#index"
+  namespace :admin do
+    root "users#index"
+
+    resources :users
+    resources :roles
+  end
 end
